@@ -21,7 +21,7 @@ class BookShelfChanger extends Component {
           <option value="none" disabled>Move to...</option>
           {
             Array.from(shelves.keys()).map((shelfName,index) => (
-              <option key={`option_${index}`} selected={shelfName==shelf && (selected)} value={shelfName}>{shelves.get(shelfName).name}</option>
+              <option key={`option_${index}`} {shelfName==shelf && (selected)} value={shelfName}>{shelves.get(shelfName).name}</option>
             ))
           }
         </select>
